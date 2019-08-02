@@ -4,17 +4,17 @@
     "default": {
       "connector": "strapi-hook-mongoose",
       "settings": {
-        "host": "${process.env.DATABASE_URI.split(':')[2].split('@').pop() || '127.0.0.1'}",
-        "port": "${process.env.DATABASE_URI.split(':').pop().split('/')[0] || 27017}",
+        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
+        "port": "${process.env.DATABASE_PORT || 27017}",
         "srv": "${process.env.DATABASE_SRV || false}",
-        "database": "${process.env.DATABASE_URI.split('/').pop() || 'strapi'}",
-        "username": "${process.env.DATABASE_URI.split(':')[1].substr(2) || ''}",
-        "password": "${process.env.DATABASE_URI.split(':')[2].split('@')[0] || ''}",
+        "database": "${process.env.DATABASE_NAME || 'strapi'}",
+        "username": "${process.env.DATABASE_USERNAME || ''}",
+        "password": "${process.env.DATABASE_PASSWORD || ''}",
         "ssl": "${process.env.DATABASE_SSL || false}"
       },
       "options": {
         "ssl": "${process.env.DATABASE_SSL || false}",
-        "authenticationDatabase": "${process.env.DATABASE_URI.split('/').pop() || ''}"
+        "authenticationDatabase": "${process.env.DATABASE_AUTHENTICATION_DATABASE || ''}"
       }
     }
   }
