@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "todo",
+  "info": {
+    "name": "todo",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "due_date": {
+      "type": "date"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "todos"
+    },
+    "user": {
+      "model": "user",
+      "via": "todos",
+      "plugin": "users-permissions"
+    }
+  }
+}
