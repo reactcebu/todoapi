@@ -1,0 +1,13 @@
+{
+  "name": "TODO API with Strapi",
+  "description": "A headless CMS for a todo app",
+  "repository": "https://github.com/reactcebu/todoapi",
+  "logo": "https://avatars2.githubusercontent.com/u/51371791",
+  "keywords": ["node", "strapi", "API"],
+  "addons": [
+    {
+      "plan": "mongolab:sandbox",
+      "as": "DATABASE"
+    }
+  ]
+}
